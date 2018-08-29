@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 
 
 public class Test_Runner {
-WebDriver driver;
+
 @Test
 public void test() 
 {
