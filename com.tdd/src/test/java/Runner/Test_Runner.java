@@ -22,7 +22,7 @@ public void beforeTest()
 {
 	System.out.println("helllooo");
 	System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
-	driver = new Firefox();
+	driver = new FirefoxDriver();
 	//System.setProperty("webdriver.firefox.bin", pathBinary.getAbsolutePath());System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
         //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	
