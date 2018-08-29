@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Test_Runner {
 WebDriver driver;
@@ -22,9 +23,8 @@ public void beforeTest()
 	System.out.println("helllooo");
 	System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
 	//System.setProperty("webdriver.firefox.bin", pathBinary.getAbsolutePath());System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	driver=new ChromeDriver();
-	//System.setProperty("webdriver.gecko.driver", "E:\\SHARED\\geckodriver\\geckodriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	
 	driver.get("http://13.251.143.66:8090/IPL-Fantasy-League/");
 
 }
