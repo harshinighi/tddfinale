@@ -2,11 +2,12 @@ package Runner;
 
 import java.io.File;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test_Runner {
 WebDriver driver;
@@ -18,12 +19,12 @@ public void test()
 @BeforeTest
 public void beforeTest()
 {
+	System.out.println("helllooo");
 	System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
-	File pathBinary = new File("/usr/lib/firefox/firefox.sh");
-	System.setProperty("webdriver.firefox.bin", pathBinary.getAbsolutePath());
+	//System.setProperty("webdriver.firefox.bin", pathBinary.getAbsolutePath());System.setProperty("webdriver.gecko.driver","/usr/bin/geckodriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	driver=new ChromeDriver();
 	//System.setProperty("webdriver.gecko.driver", "E:\\SHARED\\geckodriver\\geckodriver.exe");
-	//System.out.println("helllooo");
-	driver= new FirefoxDriver();
 	driver.get("http://13.251.143.66:8090/IPL-Fantasy-League/");
 
 }
